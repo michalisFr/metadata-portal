@@ -3,8 +3,8 @@ public_dir = "public"
 qr_dir = "public/qr"
 
 [verifier]
-name = "Parity"
-public_key = "c46a22b9da19540a77cbde23197e5fd90485c72b4ecf3c599ecca6998f39bd57"
+name = "michalis"
+public_key = "847074f1fb351eaa06337823c68f2a9fb28c98db976bc5cc16867e4b84bc1060"
 
 [[chains]]
 name = "polkadot"
@@ -17,3 +17,11 @@ rpc_endpoint = "wss://kusama-rpc.polkadot.io"
 [[chains]]
 name = "westend"
 rpc_endpoint = "wss://westend-rpc.polkadot.io"
+
+[[chains]]
+name = "statemine"
+rpc_endpoint = "wss://statemine-rpc.polkadot.io"
+
+[[chains]]
+name = "statemint"
+rpc_endpoint = "wss://statemint-rpc.polkadot.io"
