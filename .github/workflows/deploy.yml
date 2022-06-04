@@ -15,6 +15,7 @@ jobs:
 
       - uses: ./.github/workflows/rust-install
 
+<<<<<<< HEAD
       - name: 🔧 Install yarn
         run: npm install -g yarn
 
@@ -31,15 +32,14 @@ jobs:
       - name: 🔧 Install dependencies
         run: yarn
 
+=======
+>>>>>>> 880098b76c02a81e3b95901d6421eefed8df7ea4
       - name: ⚙ Run verifier
         run: make verifier
 
       - name: ⚙ Run collector
         run: make collector
 
-      - name: 🚀 Deploy
-        run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          yarn deploy -u "GitHub Action <action@github.com>"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: ./.github/workflows/deploy
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
